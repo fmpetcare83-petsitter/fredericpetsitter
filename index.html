@@ -6,25 +6,30 @@
   <title>F&M Pet Care – Pet Sitting à Fréjus</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f2f2;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eaf6f6;
       color: #333;
       margin: 0;
       padding: 0;
     }
     header {
       background-color: #b3d9d9;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
     }
     h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2em;
+      color: #004d4d;
     }
     section {
       padding: 20px;
       max-width: 800px;
       margin: auto;
+    }
+    h2 {
+      color: #006666;
+      margin-top: 40px;
     }
     ul {
       list-style: none;
@@ -33,22 +38,38 @@
     li::before {
       content: "✔️ ";
     }
-    .contact {
-      text-align: center;
+    .tarifs {
+      background-color: #f2f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .contact-form {
       margin-top: 30px;
     }
-    .contact a {
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    button {
       background-color: #009999;
       color: white;
       padding: 10px 20px;
-      text-decoration: none;
+      border: none;
       border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
     }
     footer {
       background-color: #b3d9d9;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       font-size: 0.9em;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -59,23 +80,38 @@
   </header>
 
   <section>
-    <p>Je me déplace directement à votre domicile pour veiller sur vos animaux lors de vos absences, vacances ou imprévus du quotidien.</p>
-    <p>Vos compagnons restent dans leur environnement familier, sans stress ni changement brutal.</p>
-
-    <h2>Au programme :</h2>
+    <h2>🐾 Services proposés</h2>
+    <p>Je me déplace à votre domicile pour veiller sur vos animaux lors de vos absences, vacances ou imprévus du quotidien. Vos compagnons restent dans leur environnement familier, sans stress ni changement brutal.</p>
     <ul>
       <li>Nourriture & eau fraîche</li>
       <li>Jeux, câlins et interaction</li>
       <li>Soins de base et petite toilette</li>
       <li>Sortie dans le jardin si besoin</li>
     </ul>
+    <p>Idéal pour les chats 🐱<br>
+    Adapté aussi aux chiens âgés, malades ou sensibles 🐶</p>
 
-    <p>🐾 Idéal pour les chats<br>
-    🐶 Adapté aussi aux chiens âgés, malades ou sensibles</p>
-
-    <div class="contact">
-      <a href="mailto:fmpetcare83@gmail.com">📧 Me contacter</a>
+    <h2>💰 Tarifs</h2>
+    <div class="tarifs">
+      <p>Visite à domicile : <strong>15 €</strong></p>
+      <p>Forfait 3 jours : <strong>40 €</strong></p>
+      <p>Forfait semaine : <strong>90 €</strong></p>
+      <p>Tarifs personnalisés sur demande</p>
     </div>
+
+    <h2>📧 Me contacter</h2>
+    <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Nom :</label>
+      <input type="text" name="name" required>
+
+      <label for="email">Email :</label>
+      <input type="email" name="email" required>
+
+      <label for="message">Message :</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
   </section>
 
   <footer>
